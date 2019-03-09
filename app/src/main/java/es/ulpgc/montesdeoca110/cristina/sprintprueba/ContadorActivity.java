@@ -56,4 +56,10 @@ public class ContadorActivity
         // deal with the data
         ((TextView) findViewById(R.id.contador)).setText(viewModel.data);
     }
+
+    @Override
+    public void displayContadorData(ContadorViewModel viewModel) {
+        String data = viewModel.contador + "";
+        contador.setText(data);
+    }
 }

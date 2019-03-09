@@ -8,6 +8,8 @@ interface ContadorContract {
         void injectPresenter(Presenter presenter);
 
         void displayData(ContadorViewModel viewModel);
+
+        void displayContadorData(ContadorViewModel viewModel);
     }
 
     interface Presenter {

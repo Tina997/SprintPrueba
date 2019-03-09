@@ -60,6 +60,7 @@ public class ContadorPresenter implements ContadorContract.Presenter {
     @Override
     public void updateContadorData() {
         viewModel.contador++;
+        view.get().displayContadorData(viewModel);
     }
 
 
