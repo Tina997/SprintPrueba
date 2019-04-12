@@ -1,8 +1,10 @@
-package es.ulpgc.montesdeoca110.cristina.sprintprueba;
+package es.ulpgc.montesdeoca110.cristina.sprintprueba.contadorIni;
 
 import java.lang.ref.WeakReference;
 
 import android.support.v4.app.FragmentActivity;
+
+import es.ulpgc.montesdeoca110.cristina.sprintprueba.AppMediator;
 
 public class ContadorScreen {
 

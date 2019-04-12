@@ -10,12 +10,15 @@
         android:name=".AppMediator"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ContadorActivity">
+        <activity android:name=".contadorIni.ContadorActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".contadorFin.contadorFinActivity">
+
         </activity>
     </application>
 

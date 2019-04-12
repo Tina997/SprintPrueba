@@ -1,6 +1,8 @@
-package es.ulpgc.montesdeoca110.cristina.sprintprueba;
+package es.ulpgc.montesdeoca110.cristina.sprintprueba.contadorIni;
 
 import java.lang.ref.WeakReference;
+
+import es.ulpgc.montesdeoca110.cristina.sprintprueba.IniToFinState;
 
 interface ContadorContract {
 
@@ -22,6 +24,8 @@ interface ContadorContract {
         void fetchData();
 
         void updateContadorData();
+
+        void onResetButtonClicked();
     }
 
     interface Model {
@@ -31,7 +35,7 @@ interface ContadorContract {
     interface Router {
         void navigateToNextScreen();
 
-        void passDataToNextScreen(ContadorState state);
+        void passDataToNextScreen(IniToFinState state);
 
         ContadorState getDataFromPreviousScreen();
     }

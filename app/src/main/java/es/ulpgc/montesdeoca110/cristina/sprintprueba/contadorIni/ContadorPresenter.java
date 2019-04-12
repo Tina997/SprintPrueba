@@ -1,8 +1,8 @@
-package es.ulpgc.montesdeoca110.cristina.sprintprueba;
-
-import android.util.Log;
+package es.ulpgc.montesdeoca110.cristina.sprintprueba.contadorIni;
 
 import java.lang.ref.WeakReference;
+
+import es.ulpgc.montesdeoca110.cristina.sprintprueba.IniToFinState;
 
 public class ContadorPresenter implements ContadorContract.Presenter {
 
@@ -13,7 +13,7 @@ public class ContadorPresenter implements ContadorContract.Presenter {
     private ContadorState state;
     private ContadorContract.Model model;
     private ContadorContract.Router router;
-
+    IniToFinState iniToFinState = new IniToFinState();
     public ContadorPresenter(ContadorState state) {
         this.state = state;
         viewModel = state;
@@ -59,8 +59,19 @@ public class ContadorPresenter implements ContadorContract.Presenter {
 
     @Override
     public void updateContadorData() {
-        viewModel.contador++;
+        if(viewModel.contador!=9) {
+            viewModel.contador++;
+        }else{
+            viewModel.contador=0;
+        }
+        iniToFinState.aumentarContador();
         view.get().displayContadorData(viewModel);
+    }
+
+    @Override
+    public void onResetButtonClicked() {
+        router.passDataToNextScreen(iniToFinState);
+        router.navigateToNextScreen();
     }
 
 

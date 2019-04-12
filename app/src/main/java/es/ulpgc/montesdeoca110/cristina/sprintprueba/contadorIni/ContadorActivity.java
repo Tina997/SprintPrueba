@@ -1,11 +1,12 @@
-package es.ulpgc.montesdeoca110.cristina.sprintprueba;
+package es.ulpgc.montesdeoca110.cristina.sprintprueba.contadorIni;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import es.ulpgc.montesdeoca110.cristina.sprintprueba.R;
 
 public class ContadorActivity
         extends AppCompatActivity implements ContadorContract.View {
@@ -14,7 +15,7 @@ public class ContadorActivity
 
     private ContadorContract.Presenter presenter;
 
-    Button incButton;
+    Button incButton, resetButton;
     TextView contador;
 
     @Override
@@ -25,6 +26,7 @@ public class ContadorActivity
 
         incButton = findViewById(R.id.button);
         contador = findViewById(R.id.contador);
+        resetButton=findViewById(R.id.buttonReset);
         incButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,6 +34,14 @@ public class ContadorActivity
             }
         });
         incButton.setText("Incrementar");
+
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.onResetButtonClicked();
+            }
+        });
+        resetButton.setText("Reset");
         // do the setup
         ContadorScreen.configure(this);
     }

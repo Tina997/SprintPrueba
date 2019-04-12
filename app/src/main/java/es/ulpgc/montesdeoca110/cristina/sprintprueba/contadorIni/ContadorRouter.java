@@ -1,8 +1,11 @@
-package es.ulpgc.montesdeoca110.cristina.sprintprueba;
+package es.ulpgc.montesdeoca110.cristina.sprintprueba.contadorIni;
 
-import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
+
+import es.ulpgc.montesdeoca110.cristina.sprintprueba.AppMediator;
+import es.ulpgc.montesdeoca110.cristina.sprintprueba.IniToFinState;
+import es.ulpgc.montesdeoca110.cristina.sprintprueba.contadorFin.contadorFinActivity;
 
 public class ContadorRouter implements ContadorContract.Router {
 
@@ -17,12 +20,12 @@ public class ContadorRouter implements ContadorContract.Router {
     @Override
     public void navigateToNextScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, ContadorActivity.class);
+        Intent intent = new Intent(context, contadorFinActivity.class);
         context.startActivity(intent);
     }
 
     @Override
-    public void passDataToNextScreen(ContadorState state) {
+    public void passDataToNextScreen(IniToFinState state) {
         mediator.setContadorState(state);
     }
 
