@@ -17,11 +17,9 @@ public class contadorFinScreen {
 
         AppMediator mediator = (AppMediator) context.get().getApplication();
         contadorFinState state = mediator.getcontadorFinState();
-        IniToFinState iniToFinState = mediator.getIniToFinState();
-        int cuenta = iniToFinState.getCuenta();
         contadorFinContract.Router router = new contadorFinRouter(mediator);
         contadorFinContract.Presenter presenter = new contadorFinPresenter(state);
-        contadorFinContract.Model model = new contadorFinModel(cuenta);
+        contadorFinContract.Model model = new contadorFinModel();
         presenter.injectModel(model);
         presenter.injectRouter(router);
         presenter.injectView(new WeakReference<>(view));

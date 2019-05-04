@@ -39,9 +39,9 @@ public class contadorFinPresenter implements contadorFinContract.Presenter {
         // Log.e(TAG, "fetchData()");
 
         // set passed state
-        contadorFinState state = router.getDataFromPreviousScreen();
+        IniToFinState state = router.getDataFromCounterScreen();
         if (state != null) {
-            viewModel.data = state.data;
+            viewModel.data = state.getCuenta()+"";
         }
 
         if (viewModel.data == null) {

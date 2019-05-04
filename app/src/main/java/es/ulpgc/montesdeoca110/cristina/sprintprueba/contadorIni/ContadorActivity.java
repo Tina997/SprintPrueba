@@ -39,6 +39,7 @@ public class ContadorActivity
             @Override
             public void onClick(View v) {
                 presenter.onResetButtonClicked();
+                finish();
             }
         });
         resetButton.setText("Reset");

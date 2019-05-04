@@ -35,4 +35,11 @@ public class contadorFinRouter implements contadorFinContract.Router {
         contadorFinState state = mediator.getcontadorFinState();
         return state;
     }
+
+    @Override
+    public IniToFinState getDataFromCounterScreen() {
+        IniToFinState iniToFinState = mediator.getIniToFinState();
+        return iniToFinState;
+    }
+
 }

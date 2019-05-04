@@ -2,6 +2,8 @@ package es.ulpgc.montesdeoca110.cristina.sprintprueba.contadorFin;
 
 import java.lang.ref.WeakReference;
 
+import es.ulpgc.montesdeoca110.cristina.sprintprueba.IniToFinState;
+
 interface contadorFinContract {
 
     interface View {
@@ -32,5 +34,7 @@ interface contadorFinContract {
         void passDataToNextScreen(contadorFinState state);
 
         contadorFinState getDataFromPreviousScreen();
+
+        IniToFinState getDataFromCounterScreen();
     }
 }
