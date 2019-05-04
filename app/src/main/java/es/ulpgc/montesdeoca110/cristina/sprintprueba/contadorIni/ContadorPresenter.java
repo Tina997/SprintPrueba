@@ -59,17 +59,14 @@ public class ContadorPresenter implements ContadorContract.Presenter {
 
     @Override
     public void updateContadorData() {
-        if(viewModel.contador!=9) {
-            viewModel.contador++;
-        }else{
-            viewModel.contador=0;
-        }
+        model.updateContador(viewModel);
         iniToFinState.aumentarContador();
         view.get().displayContadorData(viewModel);
     }
 
     @Override
     public void onResetButtonClicked() {
+        viewModel.contador = 0;
         router.passDataToNextScreen(iniToFinState);
         router.navigateToNextScreen();
     }

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.Context;
 
 import es.ulpgc.montesdeoca110.cristina.sprintprueba.AppMediator;
+import es.ulpgc.montesdeoca110.cristina.sprintprueba.IniToFinState;
 import es.ulpgc.montesdeoca110.cristina.sprintprueba.contadorIni.ContadorActivity;
 
 public class contadorFinRouter implements contadorFinContract.Router {

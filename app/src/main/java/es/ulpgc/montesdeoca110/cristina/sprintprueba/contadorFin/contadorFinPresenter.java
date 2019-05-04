@@ -4,6 +4,8 @@ import android.util.Log;
 
 import java.lang.ref.WeakReference;
 
+import es.ulpgc.montesdeoca110.cristina.sprintprueba.IniToFinState;
+
 public class contadorFinPresenter implements contadorFinContract.Presenter {
 
     public static String TAG = contadorFinPresenter.class.getSimpleName();

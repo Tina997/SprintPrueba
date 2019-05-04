@@ -30,6 +30,8 @@ interface ContadorContract {
 
     interface Model {
         String fetchData();
+
+        void updateContador(ContadorViewModel viewModel);
     }
 
     interface Router {
