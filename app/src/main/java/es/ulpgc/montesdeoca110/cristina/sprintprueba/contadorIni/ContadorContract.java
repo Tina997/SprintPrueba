@@ -29,7 +29,7 @@ interface ContadorContract {
     }
 
     interface Model {
-        String fetchData();
+        String fetchData(int contador);
 
         void updateContador(ContadorViewModel viewModel);
     }

@@ -59,6 +59,9 @@ public class contadorFinPresenter implements contadorFinContract.Presenter {
 
     @Override
     public void onResetButtonClicked() {
+        IniToFinState iniToFinState = new IniToFinState();
+        iniToFinState.resetCuenta();
+        router.passDataToNextScreen(iniToFinState);
         router.navigateToNextScreen();
     }
 

@@ -26,8 +26,8 @@ public class contadorFinRouter implements contadorFinContract.Router {
     }
 
     @Override
-    public void passDataToNextScreen(contadorFinState state) {
-        mediator.setcontadorFinState(state);
+    public void passDataToNextScreen(IniToFinState state) {
+        mediator.setIniToFinState(state);
     }
 
     @Override

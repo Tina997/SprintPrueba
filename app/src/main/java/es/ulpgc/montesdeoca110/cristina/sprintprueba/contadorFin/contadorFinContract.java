@@ -31,7 +31,7 @@ interface contadorFinContract {
     interface Router {
         void navigateToNextScreen();
 
-        void passDataToNextScreen(contadorFinState state);
+        void passDataToNextScreen(IniToFinState state);
 
         contadorFinState getDataFromPreviousScreen();
 

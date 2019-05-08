@@ -8,13 +8,13 @@ public class ContadorModel implements ContadorContract.Model {
     public static String TAG = ContadorModel.class.getSimpleName();
 
     private String cuenta;
-    public ContadorModel(int cuenta) {
-        this.cuenta = ""+cuenta;
+    public ContadorModel() {
     }
 
     @Override
-    public String fetchData() {
+    public String fetchData(int contador) {
         // Log.e(TAG, "fetchData()");
+        this.cuenta = contador+"";
         return cuenta;
     }
 

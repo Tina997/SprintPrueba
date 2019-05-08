@@ -12,4 +12,8 @@ public class IniToFinState {
     public void aumentarContador(){
         contadorIniToFin++;
     }
+
+    public void resetCuenta() {
+        contadorIniToFin = 0;
+    }
 }

@@ -13,10 +13,11 @@ public class ContadorPresenter implements ContadorContract.Presenter {
     private ContadorState state;
     private ContadorContract.Model model;
     private ContadorContract.Router router;
-    IniToFinState iniToFinState = new IniToFinState();
-    public ContadorPresenter(ContadorState state) {
+    IniToFinState iniToFinState;
+    public ContadorPresenter(ContadorState state, IniToFinState iniToFinState) {
         this.state = state;
         viewModel = state;
+        this.iniToFinState = iniToFinState;
     }
 
     @Override
@@ -46,7 +47,7 @@ public class ContadorPresenter implements ContadorContract.Presenter {
 
         if (viewModel.data == null) {
             // call the model
-            String data = model.fetchData();
+            String data = model.fetchData(viewModel.contador);
 
             // set initial state
             viewModel.data = data;
