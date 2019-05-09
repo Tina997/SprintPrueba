@@ -12,9 +12,9 @@ public class ContadorModel implements ContadorContract.Model {
     }
 
     @Override
-    public String fetchData(int contador) {
+    public String fetchData(String cuenta) {
         // Log.e(TAG, "fetchData()");
-        this.cuenta = contador+"";
+        this.cuenta = cuenta;
         return cuenta;
     }
 

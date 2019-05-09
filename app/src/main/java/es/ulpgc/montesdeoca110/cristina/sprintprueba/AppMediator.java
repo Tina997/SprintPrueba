@@ -29,8 +29,8 @@ public class AppMediator extends Application {
         return contadorState;
     }
 
-    public void setContadorState(IniToFinState state) {
-        this.iniToFinState = state;
+    public void setContadorState(ContadorState state) {
+        this.contadorState = state;
 
     }
 

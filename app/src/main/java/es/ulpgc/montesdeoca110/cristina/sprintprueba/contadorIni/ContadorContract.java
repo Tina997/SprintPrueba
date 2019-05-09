@@ -29,7 +29,7 @@ interface ContadorContract {
     }
 
     interface Model {
-        String fetchData(int contador);
+        String fetchData(String cuenta);
 
         void updateContador(ContadorViewModel viewModel);
     }
@@ -37,7 +37,7 @@ interface ContadorContract {
     interface Router {
         void navigateToNextScreen();
 
-        void passDataToNextScreen(IniToFinState state);
+        void passDataToNextScreen(IniToFinState state,ContadorState contadorState);
 
         ContadorState getDataFromPreviousScreen();
     }

@@ -17,7 +17,6 @@ public class ContadorScreen {
         AppMediator mediator = (AppMediator) context.get().getApplication();
         ContadorState state = mediator.getContadorState();
         IniToFinState iniToFinState = mediator.getIniToFinState();
-        //int cuenta = mediator.getCuenta();
 
         ContadorContract.Router router = new ContadorRouter(mediator);
         ContadorContract.Presenter presenter = new ContadorPresenter(state,iniToFinState);

@@ -47,14 +47,14 @@ public class ContadorPresenter implements ContadorContract.Presenter {
 
         if (viewModel.data == null) {
             // call the model
-            String data = model.fetchData(viewModel.contador);
+            String data = model.fetchData(viewModel.data);
 
             // set initial state
             viewModel.data = data;
         }
 
         // update the view
-        view.get().displayData(viewModel);
+        view.get().displayContadorData(viewModel);
 
     }
 
@@ -63,12 +63,13 @@ public class ContadorPresenter implements ContadorContract.Presenter {
         model.updateContador(viewModel);
         iniToFinState.aumentarContador();
         view.get().displayContadorData(viewModel);
+
     }
 
     @Override
     public void onResetButtonClicked() {
         viewModel.contador = 0;
-        router.passDataToNextScreen(iniToFinState);
+        router.passDataToNextScreen(iniToFinState, state);
         router.navigateToNextScreen();
     }
 
